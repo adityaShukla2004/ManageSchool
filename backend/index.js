@@ -17,7 +17,7 @@ app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
 mongoose
-    .connect("mongodb://localhost:27017/schoo_management", {
+    .connect(process.env.DB_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
@@ -30,6 +30,6 @@ app.get("/", (req, res) => {
 
     res.send("This is Gurukul-management web app");
   });
-app.listen(3000, () => {
-    console.log(`Server started at port no. ${3000}`)
+app.listen(PORT, () => {
+    console.log(`Server started at port no. ${PORT}`)
 });

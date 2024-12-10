@@ -44,13 +44,13 @@ const SeeNotice = () => {
             {loading ? (
                 <div style={{ fontSize: '20px' }}>Loading...</div>
             ) : response ? (
-                <div style={{ fontSize: '20px' }}>No Notices to Show Right Now</div>
+                <div style={{ fontSize: '20px',color:'rgba(20, 179, 20, 0.895)', paddingBottom:'40px' }}>No Notices to Show Right Now</div>
             ) : (
                 <>
-                    <h3 style={{ fontSize: '30px', marginBottom: '40px' }}>Notices</h3>
-                    <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+                    <h3 style={{ fontSize: '30px', marginBottom: '40px',color:'#4ecb4a' }}>Notices</h3>
+                    <Paper sx={{ width: '100%', overflow: 'hidden'}}>
                         {Array.isArray(noticesList) && noticesList.length > 0 &&
-                            <TableViewTemplate columns={noticeColumns} rows={noticeRows} />
+                            <TableViewTemplate columns={noticeColumns} rows={noticeRows}/>
                         }
                     </Paper>
                 </>

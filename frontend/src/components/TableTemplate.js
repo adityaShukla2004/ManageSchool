@@ -15,12 +15,12 @@ const TableTemplate = ({ buttonHaver: ButtonHaver, columns, rows }) => {
                                 <StyledTableCell
                                     key={column.id}
                                     align={column.align}
-                                    style={{ minWidth: column.minWidth }}
+                                    style={{ minWidth: column.minWidth,backgroundColor:'#4ecb4a' }}
                                 >
                                     {column.label}
                                 </StyledTableCell>
                             ))}
-                            <StyledTableCell align="center">
+                            <StyledTableCell align="center"  style={{backgroundColor:'#4ecb4a' }}>
                                 Actions
                             </StyledTableCell>
                         </StyledTableRow>

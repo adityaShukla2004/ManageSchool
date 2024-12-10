@@ -23,7 +23,8 @@ import TeacherHomePage from './TeacherHomePage';
 import TeacherProfile from './TeacherProfile';
 import TeacherViewStudent from './TeacherViewStudent';
 import StudentExamMarks from '../admin/studentRelated/StudentExamMarks';
-
+import Logo  from '../logo/Logo';
+ 
 const TeacherDashboard = () => {
     const [open, setOpen] = useState(true);
     const toggleDrawer = () => {
@@ -35,7 +36,7 @@ const TeacherDashboard = () => {
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />
                 <AppBar open={open} position='absolute'>
-                    <Toolbar sx={{ pr: '24px' }}>
+                    <Toolbar sx={{ pr: '24px',bgcolor:'white' }}>
                         <IconButton
                             edge="start"
                             color="inherit"
@@ -43,19 +44,17 @@ const TeacherDashboard = () => {
                             onClick={toggleDrawer}
                             sx={{
                                 marginRight: '36px',
-                                ...(open && { display: 'none' }),
+                                color:'black' ,
+                                ...(open && { display: 'none'}),
                             }}
                         >
                             <MenuIcon />
                         </IconButton>
                         <Typography
-                            component="h1"
-                            variant="h6"
-                            color="inherit"
-                            noWrap
+                           
                             sx={{ flexGrow: 1 }}
                         >
-                            Teacher Dashboard
+                            <Logo/>
                         </Typography>
                         <AccountMenu />
                     </Toolbar>

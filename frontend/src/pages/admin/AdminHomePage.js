@@ -36,8 +36,8 @@ const AdminHomePage = () => {
         <>
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                 <Grid container spacing={3}>
-                    <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                    <Grid item xs={12} md={3} lg={3}  >
+                        <StyledPaper sx={{bgcolor:'#4ecb4a' }}>
                             <img src={Students} alt="Students" />
                             <Title>
                                 Total Students
@@ -46,16 +46,16 @@ const AdminHomePage = () => {
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper  sx={{ bgcolor:'#4ecb4a'  }}>
                             <img src={Classes} alt="Classes" />
-                            <Title>
+                            <Title >
                                 Total Classes
                             </Title>
                             <Data start={0} end={numberOfClasses} duration={5} />
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper  sx={{ bgcolor:'#4ecb4a' }}>
                             <img src={Teachers} alt="Teachers" />
                             <Title>
                                 Total Teachers
@@ -64,7 +64,7 @@ const AdminHomePage = () => {
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper  sx={{ bgcolor:'#4ecb4a' }}>
                             <img src={Fees} alt="Fees" />
                             <Title>
                                 Fees Collection
@@ -72,7 +72,7 @@ const AdminHomePage = () => {
                             <Data start={0} end={23000} duration={2.5} prefix="$" />                        </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={12} lg={12}>
-                        <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                        <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column'}} >
                             <SeeNotice />
                         </Paper>
                     </Grid>
@@ -95,11 +95,12 @@ const StyledPaper = styled(Paper)`
 
 const Title = styled.p`
   font-size: 1.25rem;
+  color:white;
 `;
 
 const Data = styled(CountUp)`
   font-size: calc(1.3rem + .6vw);
-  color: green;
+  color: white;
 `;
 
 export default AdminHomePage

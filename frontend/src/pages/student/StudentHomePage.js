@@ -46,7 +46,7 @@ const StudentHomePage = () => {
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper  sx={{ bgcolor:'#3cbcc3' }}>
                             <img src={Subject} alt="Subjects" />
                             <Title>
                                 Total Subjects
@@ -55,7 +55,7 @@ const StudentHomePage = () => {
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper  sx={{ bgcolor:'#3cbcc3' }}>
                             <img src={Assignment} alt="Assignments" />
                             <Title>
                                 Total Assignments
@@ -124,11 +124,12 @@ const StyledPaper = styled(Paper)`
 
 const Title = styled.p`
   font-size: 1.25rem;
+  color: white;
 `;
 
 const Data = styled(CountUp)`
   font-size: calc(1.3rem + .6vw);
-  color: green;
+  color: white;
 `;
 
 

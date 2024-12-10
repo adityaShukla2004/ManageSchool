@@ -32,7 +32,7 @@ const TeacherHomePage = () => {
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper sx={{bgcolor:'#4ecb4a' }}>
                             <img src={Students} alt="Students" />
                             <Title>
                                 Class Students
@@ -41,16 +41,16 @@ const TeacherHomePage = () => {
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper sx={{bgcolor:'#4ecb4a' }}>
                             <img src={Lessons} alt="Lessons" />
                             <Title>
                                 Total Lessons
                             </Title>
                             <Data start={0} end={numberOfSessions} duration={5} />
-                        </StyledPaper>
+                        </StyledPaper >
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper sx={{bgcolor:'#4ecb4a' }}>
                             <img src={Tests} alt="Tests" />
                             <Title>
                                 Tests Taken
@@ -59,7 +59,7 @@ const TeacherHomePage = () => {
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper sx={{bgcolor:'#4ecb4a' }}>
                             <img src={Time} alt="Time" />
                             <Title>
                                 Total Hours
@@ -89,11 +89,12 @@ const StyledPaper = styled(Paper)`
 
 const Title = styled.p`
   font-size: 1.25rem;
+  color:white;
 `;
 
 const Data = styled(CountUp)`
   font-size: calc(1.3rem + .6vw);
-  color: green;
+  color: white;
 `;
 
 export default TeacherHomePage

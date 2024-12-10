@@ -23,8 +23,11 @@ const Logout = () => {
         <LogoutContainer>
             <h1>{currentUser.name}</h1>
             <LogoutMessage>Are you sure you want to log out?</LogoutMessage>
-            <LogoutButtonLogout onClick={handleLogout}>Log Out</LogoutButtonLogout>
-            <LogoutButtonCancel onClick={handleCancel}>Cancel</LogoutButtonCancel>
+             <DisplayDiv>
+             <LogoutButtonLogout onClick={handleLogout}>Log Out</LogoutButtonLogout>
+             <LogoutButtonCancel onClick={handleCancel}>Cancel</LogoutButtonCancel>
+             </DisplayDiv>
+           
         </LogoutContainer>
     );
 };
@@ -32,17 +35,24 @@ const Logout = () => {
 export default Logout;
 
 const LogoutContainer = styled.div`
-  border: 1px solid #ccc;
-  border-radius: 10px;
+   width:70%;
+   margin:auto;
+   margin-top:100px;
   padding: 20px;
+  border-radius:20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  background-color: #85769f66;
-  color: black;
+  background-color: #4ecb4a;
+  color: white;
 `;
+
+const DisplayDiv = styled.div`
+width:40%,
+margin:auto;
+display:flex;
+`
 
 const LogoutMessage = styled.p`
   margin-bottom: 20px;
@@ -53,10 +63,12 @@ const LogoutMessage = styled.p`
 const LogoutButton = styled.button`
   padding: 10px 20px;
   margin-top: 10px;
-  border-radius: 5px;
+  margin:5px;
+  border-radius:4px;
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+  border:none;
 
   &:hover {
     color: #fff;

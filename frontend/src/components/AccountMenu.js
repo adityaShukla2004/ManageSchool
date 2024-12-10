@@ -29,7 +29,7 @@ const AccountMenu = () => {
                         aria-haspopup="true"
                         aria-expanded={open ? 'true' : undefined}
                     >
-                        <Avatar sx={{ width: 32, height: 32 }}>
+                        <Avatar sx={{ width: 36, height: 36 ,bgcolor:'#4ecb4a'}}>
                             {String(currentUser.name).charAt(0)}
                         </Avatar>
                     </IconButton>
@@ -44,9 +44,12 @@ const AccountMenu = () => {
                 PaperProps={{
                     elevation: 0,
                     sx: styles.styledPaper,
+                    
                 }}
+               
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                
             >
                 <MenuItem>
                     <Avatar />

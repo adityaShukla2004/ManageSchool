@@ -56,9 +56,10 @@ const ShowTeachers = () => {
         return {
             name: teacher.name,
             teachSubject: teacher.teachSubject?.subName || null,
-            teachSclass: teacher.teachSclass.sclassName,
-            teachSclassID: teacher.teachSclass._id,
-            id: teacher._id,
+          //  teachSclass: teacher.teachSclass.sclassName,
+          //  teachSclassID: teacher.teachSclass._id,
+           id: teacher._id,
+            
         };
     });
 

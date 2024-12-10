@@ -41,6 +41,7 @@ import AddClass from './classRelated/AddClass';
 import ClassDetails from './classRelated/ClassDetails';
 import ShowClasses from './classRelated/ShowClasses';
 import AccountMenu from '../../components/AccountMenu';
+import Logo from '../logo/Logo';
 
 const AdminDashboard = () => {
     const [open, setOpen] = useState(false);
@@ -53,10 +54,11 @@ const AdminDashboard = () => {
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />
                 <AppBar open={open} position='absolute'>
-                    <Toolbar sx={{ pr: '24px' }}>
+                    <Toolbar sx={{ pr: '24px' ,backgroundColor:'white' }}>
+                       
                         <IconButton
                             edge="start"
-                            color="inherit"
+                            color="black"
                             aria-label="open drawer"
                             onClick={toggleDrawer}
                             sx={{
@@ -68,18 +70,18 @@ const AdminDashboard = () => {
                         </IconButton>
                         <Typography
                             component="h1"
-                            variant="h6"
-                            color="inherit"
-                            noWrap
+                            
                             sx={{ flexGrow: 1 }}
                         >
-                            Admin Dashboard
+                            <Logo/>
                         </Typography>
                         <AccountMenu />
                     </Toolbar>
                 </AppBar>
                 <Drawer variant="permanent" open={open} sx={open ? styles.drawerStyled : styles.hideDrawer}>
+               
                     <Toolbar sx={styles.toolBarStyled}>
+                  
                         <IconButton onClick={toggleDrawer}>
                             <ChevronLeftIcon />
                         </IconButton>

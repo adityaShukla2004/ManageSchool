@@ -86,9 +86,9 @@ const ShowNotices = () => {
                             </GreenButton>
                         </Box>
                         :
-                        <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+                        <Paper sx={{ width: '100%', overflow: 'hidden',marginTop:'10px'}}>
                             {Array.isArray(noticesList) && noticesList.length > 0 &&
-                                <TableTemplate buttonHaver={NoticeButtonHaver} columns={noticeColumns} rows={noticeRows} />
+                                <TableTemplate buttonHaver={NoticeButtonHaver} columns={noticeColumns} rows={noticeRows}  />
                             }
                             <SpeedDialTemplate actions={actions} />
                         </Paper>

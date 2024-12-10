@@ -9,13 +9,13 @@ const TableViewTemplate = ({ columns, rows }) => {
         <>
             <TableContainer>
                 <Table stickyHeader aria-label="sticky table">
-                    <TableHead>
+                    <TableHead sx={{bgcolor:'#4ecb4a'}}>
                         <StyledTableRow>
                             {columns.map((column, index) => (
                                 <StyledTableCell
                                     key={index}
                                     align={column.align}
-                                    style={{ minWidth: column.minWidth }}
+                                    style={{ minWidth: column.minWidth,backgroundColor:'#4ecb4a' }}
                                 >
                                     {column.label}
                                 </StyledTableCell>
